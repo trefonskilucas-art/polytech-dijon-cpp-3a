@@ -12,7 +12,7 @@ materiel::materiel (std::string nom, std::string type, std::string specification
 
 }
 
-// Verfication
+// Verfication des types de données
 bool materiel::isvalid () const {
     if (_type == "poste de travail" or _type == "petit materiel" or _type == "ecran" or _type == "connectique" or _type == "materiel reseau" or _type == "materiel specifique") return false;
     if (_type == "poste de travail " && (_specificationtypestr != "linux" or _specificationtypestr != "Windows" or _specificationtypestr != "mac" or _specificationtypestr != "autre")) return false;
@@ -21,6 +21,7 @@ bool materiel::isvalid () const {
     return true;
     
 }
+// on regarde si le materiel est dans une salle sinon on le met dans l'inventaire 
 
 std::string materiel::emplacement(std::string nom,std::string emplacementmateriel,  std::vector<std::string> _listesalles){
     for (int i = 0; i < _listesalles.size(); i++){
@@ -36,7 +37,7 @@ std::string materiel::emplacement(std::string nom,std::string emplacementmaterie
 
 
 
-
+// on verifie si le poste de travail a bien comme systeme d'exploitation linux, windows, mac ou un autre
 
 std::string materiel::verif() const {
     if (_type == "poste de travail " && (_specificationtypestr != "linux" or _specificationtypestr != "Windows" or _specificationtypestr != "mac" or _specificationtypestr != "autre")) {
@@ -45,6 +46,8 @@ std::string materiel::verif() const {
     }
     return "";
 }
+
+// on verifie que la taille de l'ecran soit coherente 
 
 int materiel::verifint() const {
     if (_type == "ecran" && (_specificationtypeint < 10 || _specificationtypeint > 50)){

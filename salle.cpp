@@ -24,6 +24,7 @@ bool salle::isvalid () const {
 std::string salle::nom() const {return  _nom;}
 std::string salle::type() const {return  _type;}
 
+// on ajoute a la liste des salles le noms des salles existante 
 
 void salle::addsalle(std::string nom){
     _listesalles.push_back(nom);
