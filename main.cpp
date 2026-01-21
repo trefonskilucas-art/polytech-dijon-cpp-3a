@@ -2,11 +2,11 @@
 #include "materiel.h"
 #include "salle.h"
 
-int main()
+int main()              // programme principal
 {
-    materiel m1("Ordinateur fixe","poste de travail", "Windows", 16);
+    materiel m1("Ordinateur fixe","poste de travail", "Windows", 16, "Salle informatique 101");
     
-    if (m1.isvalid()) {
+    if (m1.isvalid()) {                     // verification de la validite du materiel et savoir si on affiche ses caracteristiques et lesquelles 
         std::cout << "Materiel valide" << std::endl;
     } else {
         std::cout << "Materiel invalide" << std::endl;
