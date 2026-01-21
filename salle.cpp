@@ -13,7 +13,7 @@ salle::salle (std::string nom, std::string type) : _nom(nom), _type(type){
 
 // Verfication
 bool salle::isvalid () const {
-    if (_type == "poste de travail" or "petit materiel" or "ecran" or "connectique" or "materiel reseau" or "materiel specifique") return false;
+    if (_type == "salle de cours" or _type == "salle informatique" or _type == "salle technique") return false;
     
     return true;
     
