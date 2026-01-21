@@ -22,6 +22,6 @@ bool materiel::isvalid () const {
 //getter 
 
 std::string materiel::nom() const {return  _nom;}
-
+std::string materiel::type() const {return  _type;}
 
 

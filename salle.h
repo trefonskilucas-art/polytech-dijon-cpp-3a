@@ -1,15 +1,15 @@
-#ifndef MATERIEL_H
-#define MATERIEL_H
+#ifndef SALLE_H
+#define SALLE_H
 #include <string>
 
 
-class materiel {
+class salle {
 private:
     std::string _nom ;
     std::string _type;
 
 public :
-    materiel (std::string  nom, std::string type );
+    salle (std::string  nom, std::string type );
 
     std::string nom() const;
     std::string type() const;
