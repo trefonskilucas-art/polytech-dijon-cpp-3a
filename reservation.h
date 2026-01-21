@@ -13,6 +13,13 @@ private:
 public:
     reservation(std::string _nomreservation, Date _datereservation, salle _sallereservation); // forme d'une reservation
 
+    // pour la prise de rendez vous 
+
+
+
+
+    
+    
     std::string nomreservation() const;         //Les getters 
     Date datereservation() const;
     salle sallereservation() const;
