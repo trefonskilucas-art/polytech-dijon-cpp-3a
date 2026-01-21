@@ -14,6 +14,9 @@ public :
     std::string nom() const;
     std::string type() const;
 
+    std::string materiel::type::specific() const;
+
+
     bool isvalid()const;
 
     
