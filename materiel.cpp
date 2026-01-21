@@ -9,3 +9,9 @@ materiel::materiel (std::string nom, std::string type) : _nom(nom), _type(type){
 
 }
 
+bool materiel::isvalid () const {
+    if (_type == "poste de travail" or "petit materiel" or "ecran" or "connectique" or "materiel reseau" or "materiel specifique") return false;
+    
+    return true;
+    
+}
