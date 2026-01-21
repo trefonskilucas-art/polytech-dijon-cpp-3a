@@ -6,7 +6,7 @@
 
 class materiel {
 private:
-    std::string _nom ;                                      //creation des attributs noms, type, specification et emplacement du materiel
+    std::string _nom ;                              //creation des attributs noms, type, specifications et emplacement du materiel
     std::string _type;
     std::string _specificationtypestr;
     int _specificationtypeint;
