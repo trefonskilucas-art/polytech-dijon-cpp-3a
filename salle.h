@@ -1,13 +1,14 @@
 #ifndef SALLE_H
 #define SALLE_H
 #include <string>
+#include <vector>
 
 
 class salle {
 private:
     std::string _nom ;
     std::string _type;
-
+    std::vector<std::string> _listesalles;
 public :
     salle (std::string  nom, std::string type );
 
@@ -16,7 +17,7 @@ public :
 
     bool isvalid()const;
 
-    
+    void addsalle(std::string nom);
 };
 
 #endif

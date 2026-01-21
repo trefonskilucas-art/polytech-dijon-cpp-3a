@@ -23,3 +23,8 @@ bool salle::isvalid () const {
 
 std::string salle::nom() const {return  _nom;}
 std::string salle::type() const {return  _type;}
+
+
+void salle::addsalle(std::string nom){
+    _listesalles.push_back(nom);
+}
