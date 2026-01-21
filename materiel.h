@@ -14,6 +14,7 @@ private:
     std::vector<std::string> _inventaire;
 
 
+
 public :                                              // constructeur de la classe materiel
     materiel (std::string  nom, std::string type, std::string _specificationtypestr, int _specificationtypeint, std::string _emplacementmateriel );
     std ::string emplacement(std::string nom,std::string emplacementmateriel,  std::vector<std::string> _listesalles);
