@@ -18,7 +18,7 @@ public:
 
 
 
-    
+
     
     std::string nomreservation() const;         //Les getters 
     Date datereservation() const;
@@ -26,18 +26,5 @@ public:
 
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif
