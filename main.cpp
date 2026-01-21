@@ -1,6 +1,7 @@
 #include <iostream>
 #include "materiel.h"
 #include "salle.h"
+#include"date.h"
 
 int main()              // programme principal
 {
