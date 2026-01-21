@@ -15,7 +15,7 @@ public:
 
     std::string nomreservation() const;         //Les getters 
     Date datereservation() const;
-    salle _sallereservation() const;
+    salle sallereservation() const;
 
 
 };
