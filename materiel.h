@@ -11,12 +11,12 @@ private:
     std::string _specificationtypestr;
     int _specificationtypeint;
     std::string _emplacementmateriel;
-    std::vector<std::string> _listeemplacementmateriel;
+    std::vector<std::string> _inventaire;
 
 
 public :
     materiel (std::string  nom, std::string type, std::string _specificationtypestr, int _specificationtypeint, std::string _emplacementmateriel );
-    std ::string emplacement(std::string nom,std::string emplacementmateriel);
+    std ::string emplacement(std::string nom,std::string emplacementmateriel,  std::vector<std::string> _listesalles);
 
     std::string nom() const;
     std::string type() const;

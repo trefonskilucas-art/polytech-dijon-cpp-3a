@@ -1,9 +1,10 @@
 #include "materiel.h"
+#include "salle.h"
 #include <iostream>
 
 
 // constructeur 
-materiel::materiel (std::string nom, std::string type, std::string specificationtypestr, int specificationtypeint, std::string emplacementmateriel) : _nom(nom), _type(type), _specificationtypestr(specificationtypestr), _specificationtypeint(specificationtypeint), _emplacementmateriel(emplacementmateriel){
+materiel::materiel (std::string nom, std::string type, std::string specificationtypestr, int specificationtypeint, std::string emplacementmateriel) : _nom(nom), _type(type), _specificationtypestr(specificationtypestr), _specificationtypeint(specificationtypeint){
     if (!isvalid()){
         std::cout << "erreur de type, mise a defaut en tant que materiel a type inconnu ou la specification n est pas valide" << std::endl;
         _type = "inconnu";
@@ -21,12 +22,16 @@ bool materiel::isvalid () const {
     
 }
 
-std::string materiel::emplacement(std::string nom,std::string emplacementmateriel){
-    
-
-    
-    _listeemplacementmateriel.push_back(emplacementmateriel);
-    return emplacementmateriel;
+std::string materiel::emplacement(std::string nom,std::string emplacementmateriel,  std::vector<std::string> _listesalles){
+    for (int i = 0; i < _listesalles.size(); i++){
+        if (emplacementmateriel == _listesalles[i]){
+            std::cout << "il est dans la salle"<< _listesalles[i] << std::endl;
+        }
+        else {
+            _inventaire.push_back(emplacementmateriel);
+        }
+    }
+    return "";
 }
 
 
@@ -43,7 +48,7 @@ std::string materiel::verif() const {
 
 int materiel::verifint() const {
     if (_type == "ecran" && (_specificationtypeint < 10 || _specificationtypeint > 50)){
-    int specificationtypeint() = 0;
+    int specificationtypeint = 0;
     }
         return specificationtypeint();
     }
